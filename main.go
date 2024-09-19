@@ -8,6 +8,7 @@ func main() {
 
 	fmt.Println(output)
 }
+
 func spam(msg string) string {
 
 	buffer := []byte(msg)
