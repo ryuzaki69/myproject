@@ -11,44 +11,44 @@ func TestSpam(t *testing.T) {
 		expected string
 	}{
 		{
-			input:    "Some http://link.com/ and more http://links.net!",
-			expected: "Some http://********* and more http://**********",
+			input:    "Some https://link.com/ and more https://links.net!",
+			expected: "Some https://********* and more https://**********",
 		},
 		{
 			input:    "No links here, just text.",
 			expected: "No links here, just text.",
 		},
 		{
-			input:    "Check out http://example.com and http://test.net now!",
-			expected: "Check out http://*********** and http://******** now!",
+			input:    "Check out https://example.com and https://test.net now!",
+			expected: "Check out https://*********** and https://******** now!",
 		},
 		{
-			input:    "http://startoftext.com",
-			expected: "http://***************",
+			input:    "https://startoftext.com",
+			expected: "https://***************",
 		},
 		{
-			input:    "http://onlylink.comHAHAHA",
-			expected: "http://******************",
+			input:    "https://onlylink.comHAHAHA",
+			expected: "https://******************",
 		},
 		{
 			input:    "",
 			expected: "",
 		},
 		{
-			input:    "http://short",
-			expected: "http://*****",
+			input:    "https://short",
+			expected: "https://*****",
 		},
 		{
-			input:    "Mixed http://example.com and regular text",
-			expected: "Mixed http://*********** and regular text",
+			input:    "Mixed https://example.com and regular text",
+			expected: "Mixed https://*********** and regular text",
 		},
 		{
 			input:    "Here's my spammy page: hTTp://youth-elixir.com",
 			expected: "Here's my spammy page: hTTp://youth-elixir.com",
 		},
 		{
-			input:    "Mixed http:// example.com with space after link",
-			expected: "Mixed http:// example.com with space after link",
+			input:    "Mixed https:// example.com with space after link",
+			expected: "Mixed https:// example.com with space after link",
 		},
 	}
 
